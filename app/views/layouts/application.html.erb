@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rubyblog</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag   'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <p class="navbar-brand">RUBY BLOG</p>
+        </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li id="home"><%= link_to "Home", home_path %></li>
+            <li id="about"><%= link_to "Create Posts", new_post_path %></li>
+          </ul>
+      </div>
+    </nav>
+
+<div class="container">
+  <%= yield %>
+</div>
+
+  </body>
+</html>
